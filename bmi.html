@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+<div class="con">
+<table class="dolphine">
+
+<tr>
+    <td>Score 1</td>
+    <td><input type="number" class="score1" placeholder="score1"></td>
+</tr>
+
+<tr>
+    <td>Score 2</td>
+    <td><input type="number" class="score2" placeholder="score2"></td>
+</tr>
+
+<tr>
+    <td>Score 3</td>
+    <td><input type="number" class="score3" placeholder="score3"></td>
+</tr>
+
+<tr>
+    <td>Average</td>
+    <td><p class="average"> </p></td>
+</tr>
+
+<tr>
+    <td>
+<button onclick="turnon()">Calculate Average</button>
+</td></tr>
+
+</table>
+
+<br><br>
+<table class="dolphine">
+
+    <marquee behavior="alternate" direction="left" scrollamount="10">Dolphine teams score</marquee>
+
+    <tr>
+        <td>Score 1</td>
+        <td><input type="number" class="kscore1" placeholder="score1"></td>
+    </tr>
+    
+    <tr>
+        <td>Score 2</td>
+        <td><input type="number" class="kscore2" placeholder="score2"></td>
+    </tr>
+    
+    <tr>
+        <td>Score 3</td>
+        <td><input type="number" class="kscore3" placeholder="score3"></td>
+    </tr>
+    
+    <tr>
+        <td>Average</td>
+        <td><p class="kaverage"> </p></td>
+    </tr>
+    
+    <tr>
+        <td>
+    <button onclick="kturnon()">Calculate Average</button>
+    </td></tr>
+    
+    </table>
+    
+</div>
+
+
+    <script>
+
+function turnon() {
+
+var a=document.querySelector('.score1').value;
+var b=document.querySelector('.score2').value;
+var c=document.querySelector('.score3').value;
+
+var d=((+a)+(+b)+(+c))/3;
+var j=Math.round(d);
+
+
+document.querySelector('.average').innerHTML=j;
+
+
+}
+
+function kturnon() {
+
+var e=document.querySelector('.kscore1').value;
+var f=document.querySelector('.kscore2').value;
+var g=document.querySelector('.kscore3').value;
+
+var h=((+e)+(+f)+(+g))/3;
+var i=Math.round(h);
+
+document.querySelector('.kaverage').innerHTML=i;
+
+
+}
+
+
+
+
+    </script>
+</body>
+</html>
