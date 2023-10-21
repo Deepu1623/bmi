@@ -30,17 +30,13 @@
     <td><p class="average"> </p></td>
 </tr>
 
-<tr>
-    <td>
-<button onclick="turnon()">Calculate Average</button>
-</td></tr>
+
 
 </table>
 
 <br><br>
 <table class="dolphine">
 
-    <marquee behavior="alternate" direction="left" scrollamount="10">Dolphine teams score</marquee>
 
     <tr>
         <td>Score 1</td>
@@ -62,12 +58,17 @@
         <td><p class="kaverage"> </p></td>
     </tr>
     
-    <tr>
-        <td>
-    <button onclick="kturnon()">Calculate Average</button>
-    </td></tr>
+    
     
     </table>
+
+   
+    <button onclick="turnon()">Calculate Average</button>
+    <br><br>
+    <h5 id="win" style="color: white; text-align: center;">hello</h5>
+
+    <button onclick="winner()">who is winner</button>
+    
     
 </div>
 
@@ -86,11 +87,6 @@ var j=Math.round(d);
 
 document.querySelector('.average').innerHTML=j;
 
-
-}
-
-function kturnon() {
-
 var e=document.querySelector('.kscore1').value;
 var f=document.querySelector('.kscore2').value;
 var g=document.querySelector('.kscore3').value;
@@ -102,6 +98,40 @@ document.querySelector('.kaverage').innerHTML=i;
 
 
 }
+
+
+function winner(){
+    var a=document.querySelector('.score1').value;
+var b=document.querySelector('.score2').value;
+var c=document.querySelector('.score3').value;
+
+var d=((+a)+(+b)+(+c));
+
+var e=document.querySelector('.kscore1').value;
+var f=document.querySelector('.kscore2').value;
+var g=document.querySelector('.kscore3').value;
+
+var h=((+e)+(+f)+(+g));
+
+
+               if(d>h){
+                document.querySelector('#win').innerHTML="team 1 is winner";
+                }
+
+                else if(d<h) {
+                    document.querySelector('#win').innerHTML='team 2 is winner';
+                 }
+
+                 else{
+                    document.querySelector('#win').innerHTML='Draw';
+
+                 }
+
+
+
+}
+
+
 
 
 
